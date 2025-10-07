@@ -11,7 +11,6 @@
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="/styles.css">
 </head>
 
 <body class="mx-5 my-2">
@@ -21,22 +20,28 @@
         </div>
         <hr>
         <div class="containter px-3">
+            <!-------------ALERT------------->
             <div class="alert alert-danger" role="alert">Some fields are missing</div>
+            <!-------------CARD DETAILS------------->
             <div class="row d-flex mt-3">
-                <div class="col-5">
+                <div class="col-12 col-md-5">
                     <label for="Card" class="form-label"><b>Card #</b></label>
                     <input class="form-control" type="text" id="Card" placeholder="xxxxxxxxxxxxxxxx">
                 </div>
-                <div class="col-3">
+                <div class="col-12 col-md-3">
                     <label for="CVC" class="form-label"><b>CVC #</b></label>
                     <input class="form-control" type="text" id="CVC" placeholder="000">
                 </div>
-                <div class="col-4">
-                    <label for="Amount" class="form-label"><b>Amount $</b></label>
-                    <input class="form-control" type="text" id="Amount" placeholder="Amount">
+                <div class="col-12 col-md-4">
+                    <label for="Amount" class="form-label"><b>Amount </b></label>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="fa-solid fa-dollar-sign"></i></span>
+                        <input class="form-control" type="text" id="Amount" placeholder="Amount">
+                    </div>
                 </div>
             </div>
         </div>
+        <!-------------PERSONAL INFORMATION------------->
         <div class="container-fluid px-3 mt-3">
             <div class=" row">
                 <div class="col-6 pe-2">
@@ -51,29 +56,33 @@
         </div>
         <div class="container-fluid px-3 mt-3">
             <div class="row">
-                <div class="col-6 pe-2">
-                    <label for="City" class="form-label">City</label>
+                <div class="col-12 col-md-6 pe-2">
+                    <label for="City" class="form-label"><b>City</b></label>
                     <input class="form-control" type="text" name="City" id="City">
                 </div>
-                <div class="col-3">
-                    <label for="State" class="form-label">State</label>
-                    <select class="form-control" name="State" id="State">
-                        <option value="Mdeo">Montevideo</option>
-                        <option value="CA">Canelones</option>
-                        <option value="SJ">San Jose</option>
-                        <option value="DU">Durazno</option>
-                    </select>
+                <div class="col-12 col-md-3">
+                    <label for="State" class="form-label"><b>State</b></label>
+                    <div class="input-group">
+                        <select class="form-select" name="State" id="State">
+                            <option value="" disabled selected><b>Pick a state</b></option>
+                            <option value="Mdeo">Montevideo</option>
+                            <option value="CA">Canelones</option>
+                            <option value="SJ">San Jose</option>
+                            <option value="DU">Durazno</option>
+                        </select>
+                    </div>
                 </div>
-                <div class="col-3 ps-2">
-                    <label for="Postal-Code" class="form-label">Postal Code</label>
+                <div class="col-12 col-md-3 ps-2">
+                    <label for="Postal-Code" class="form-label"><b>Postal Code</b></label>
                     <input class="form-control" type="text" name="Postal-Code" id="Postal-Code">
                 </div>
             </div>
         </div>
+        <!-------------PAYMENT METHOD------------->
         <div class="container-fluid px-3 mt-3">
             <div class="row">
-                <div class="col-6">
-                    <label class="form-label d-block mb-2">We accept:</label>
+                <div class="cool-12 col-sm-6">
+                    <label class="form-label d-block mb-2"><b>We accept:</b></label>
                     <div class="bg-secondary-subtle d-inline-flex align-items-center p-2 rounded">
                         <div class="me-3">
                             <input type="radio" name="Payment" id="Visa" value="Visa">
@@ -91,15 +100,16 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="col-6">
-                    <label for="Message" class="form-label">Message</label>
+                <!-------------MESSAGE------------->
+                <div class="col-12 col-sm-6">
+                    <label for="Message" class="form-label"><b>Message</b></label>
                     <textarea class="form-control" name="Message" id="Message"></textarea>
                     <h6 class="text-dark-emphasis mt-1">Add any notes here.</h6>
                 </div>
             </div>
         </div>
         <hr>
+        <!-------------BUTTON------------->
         <div class="d-flex justify-content-end px-3 mb-3">
             <button class="btn btn-secondary mx-2" type="button">Cancel</button>
             <button class="btn btn-primary" type="button">Send</button>
